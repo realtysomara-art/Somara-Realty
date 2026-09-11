@@ -370,7 +370,80 @@
       });
     });
   }
+var LOCATIONS = ["Downtown Dubai", "Dubai Marina", "Dubai Hills Estate", "Business Bay", "Palm Jumeirah", "Arabian Ranches"];
 
+function initLocationAutocomplete() {
+  var input = document.getElementById("searchLocation");
+  var list = document.getElementById("searchLocationList");
+  if (!input || !list) return;
+
+  var activeIndex = -1;
+
+  function render(items) {
+    if (items.length === 0) {
+      list.classList.remove("is-open");
+      list.innerHTML = "";
+      return;
+    }
+    list.innerHTML = items
+      .map(function (loc, i) {
+        return '<div class="autocomplete-item" data-index="' + i + '">' + loc + "</div>";
+      })
+      .join("");
+    list.classList.add("is-open");
+    activeIndex = -1;
+  }
+
+  function currentMatches() {
+    var q = input.value.trim().toLowerCase();
+    if (!q) return LOCATIONS;
+    return LOCATIONS.filter(function (loc) {
+      return loc.toLowerCase().indexOf(q) !== -1;
+    });
+  }
+
+  input.addEventListener("focus", function () {
+    render(currentMatches());
+  });
+  input.addEventListener("input", function () {
+    render(currentMatches());
+  });
+  input.addEventListener("keydown", function (e) {
+    var items = list.querySelectorAll(".autocomplete-item");
+    if (!items.length) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      activeIndex = Math.min(activeIndex + 1, items.length - 1);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      activeIndex = Math.max(activeIndex - 1, 0);
+    } else if (e.key === "Enter" && activeIndex >= 0) {
+      e.preventDefault();
+      input.value = items[activeIndex].textContent;
+      list.classList.remove("is-open");
+      return;
+    } else if (e.key === "Escape") {
+      list.classList.remove("is-open");
+      return;
+    } else {
+      return;
+    }
+    items.forEach(function (item, i) {
+      item.classList.toggle("is-active", i === activeIndex);
+    });
+  });
+  list.addEventListener("click", function (e) {
+    var item = e.target.closest(".autocomplete-item");
+    if (!item) return;
+    input.value = item.textContent;
+    list.classList.remove("is-open");
+  });
+  document.addEventListener("click", function (e) {
+    if (e.target !== input && !list.contains(e.target)) {
+      list.classList.remove("is-open");
+    }
+  });
+}
   function initSearch() {
     var form = document.getElementById("heroSearchForm");
     if (!form) return;
