@@ -450,12 +450,12 @@ function initLocationAutocomplete() {
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var location = document.getElementById("searchLocation").value;
+      var location = document.getElementById("searchLocation").value.trim();
       var type = document.getElementById("searchType").value;
       var budget = document.getElementById("searchBudget").value;
 
       var filtered = PROPERTIES.filter(function (p) {
-        var matchLocation = !location || p.location === location;
+        var matchLocation = !location || p.location.toLowerCase().indexOf(location.toLowerCase()) !== -1;
         var matchType = !type || p.type === type;
         var matchBudget = !budget || p.budgetTier === budget;
         return matchLocation && matchType && matchBudget;
@@ -616,6 +616,7 @@ function initLocationAutocomplete() {
       loadProperties().then(function () {
         renderProperties(PROPERTIES);
         initSearch();
+         initLocationAutocomplete();
       });
     }
 
