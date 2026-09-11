@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>All Properties | Somara Realty</title>
+<meta name="description" content="Browse all current Somara Realty listings." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo" aria-label="Somara Realty — home">SOMARA</a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="/contact/" class="btn btn-primary header-cta">Book a Consultation</a>
+    <button type="button" class="menu-toggle" aria-label="Open menu">
+      <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true"><path d="M0 1H22M0 8H22M0 15H22" stroke="currentColor" stroke-width="1.5"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-menu-top">
+    <span class="logo">SOMARA</span>
+    <button type="button" class="mobile-menu-close" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M1 1l18 18M19 1L1 19" stroke="currentColor" stroke-width="1.4"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/about/">About Us</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="/contact/" class="btn btn-primary btn-block">Book a Consultation</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <section class="page-hero">
+    <div class="container" style="max-width:48rem;">
+      <span class="eyebrow">All Properties</span>
+      <h1>Every current listing.</h1>
+      <p class="body-lg">Search or filter below — same tools as the homepage.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:2.5rem;">
+    <div class="container">
+      <div class="hero-search" style="margin-top:0; max-width:none;">
+        <form id="heroSearchForm">
+          <div class="field">
+            <label for="searchLocation">Location</label>
+            <select id="searchLocation">
+              <option value="">Any location</option>
+              <option>Downtown Dubai</option>
+              <option>Dubai Marina</option>
+              <option>Dubai Hills Estate</option>
+              <option>Business Bay</option>
+              <option>Palm Jumeirah</option>
+              <option>Arabian Ranches</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="searchType">Property Type</label>
+            <select id="searchType">
+              <option value="">Any type</option>
+              <option>Apartment</option>
+              <option>Villa</option>
+              <option>Townhouse</option>
+              <option>Penthouse</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="searchBudget">Budget (AED)</label>
+            <select id="searchBudget">
+              <option value="">Any budget</option>
+              <option value="1-5">1M – 5M</option>
+              <option value="5-10">5M – 10M</option>
+              <option value="10+">10M+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="searchBedrooms">Bedrooms</label>
+            <select id="searchBedrooms">
+              <option value="">Any</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4+</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+
+      <div class="properties-grid" id="propertyGrid" style="margin-top:3rem;"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <span class="logo">SOMARA</span>
+      <p class="body-sm" style="margin-top:1rem; max-width:20rem;">Relentless. By Choice. Built Through Adversity. Driven By Vision.</p>
+    </div>
+    <div>
+      <h2>Navigate</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/properties/">All Properties</a></li>
+        <li><a href="/categories/">Browse By Category</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Connect</h2>
+      <ul>
+        <li><a href="mailto:hello@somararealty.com" id="footerEmail">hello@somararealty.com</a></li>
+        <li><a href="#" id="footerWhatsapp" target="_blank" rel="noopener noreferrer" style="display:none;">WhatsApp</a></li>
+        <li><a href="#" id="footerInstagram" target="_blank" rel="noopener noreferrer" style="display:none;">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Somara Realty. All rights reserved.</p>
+    <p>Dubai, United Arab Emirates</p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="propertyModal" role="dialog" aria-modal="true" aria-label="Property details">
+  <div class="modal" id="propertyModalContent"></div>
+</div>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
