@@ -306,11 +306,11 @@ h4 { font-family: var(--font-sans); font-weight: 600; font-size: 1.125rem; }
   position: relative;
   z-index: 2;
   margin-top: 3rem;
-  background: rgba(11, 10, 8, 0.88);
+  background: rgba(11, 10, 8, 0.94);
   border: 1px solid rgba(198, 161, 100, 0.3);
   border-radius: var(--radius);
   padding: 1.5rem;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(28px);
   max-width: 64rem;
 }
 .hero-search form {
