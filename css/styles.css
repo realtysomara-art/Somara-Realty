@@ -242,7 +242,7 @@ h4 { font-family: var(--font-sans); font-weight: 600; font-size: 1.125rem; }
   min-height: 100svh;
   display: grid;
   align-items: center;
-  overflow: hidden;
+ 
   background: var(--ink);
   padding-top: 6rem;
 }
