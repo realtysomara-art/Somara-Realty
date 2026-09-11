@@ -16,8 +16,8 @@ collections:
           - {label: "Headline — line 1", name: "heroLine1", widget: "string", required: false, hint: "Leave blank to keep the current text"}
           - {label: "Headline — line 2 (shown in gold)", name: "heroLine2", widget: "string", required: false}
           - {label: "Subtext", name: "heroSubtext", widget: "text", required: false}
-          - {label: "Background photo", name: "heroImage", widget: "image", required: false, media_folder: "images/hero", public_folder: "/images/hero"}
-          - {label: "Background video (overrides photo — MP4, under ~10MB)", name: "heroVideo", widget: "file", required: false, media_folder: "images/hero", public_folder: "/images/hero"}
+                    - {label: "Background photo", name: "heroImage", widget: "image", required: false, media_folder: "/images/hero", public_folder: "/images/hero"}
+          - {label: "Background video (overrides photo — MP4, under ~10MB)", name: "heroVideo", widget: "file", required: false, media_folder: "/images/hero", public_folder: "/images/hero"}
 
       - file: "content/contact-info.json"
         label: "Contact Info"
