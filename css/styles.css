@@ -276,7 +276,7 @@ h4 { font-family: var(--font-sans); font-weight: 600; font-size: 1.125rem; }
 .hero-bg .fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--ink) 5%, transparent 45%, rgba(11,10,8,0.55) 100%);
+  background: linear-gradient(to right, rgba(11,10,8,0.85) 0%, rgba(11,10,8,0.55) 40%, rgba(11,10,8,0.15) 70%, transparent 100%);
 }
 /* Optional real hero photo — drop a file at images/hero/hero-bg.jpg and it
    displays automatically, covering the CSS placeholder. If the file is
