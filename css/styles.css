@@ -715,3 +715,21 @@ h4 { font-family: var(--font-sans); font-weight: 600; font-size: 1.125rem; }
 @media (max-width: 700px) {
   .responsive-2col { grid-template-columns: 1fr !important; }
 }
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #25d366;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  z-index: 50;
+  transition: transform 200ms ease;
+}
+.whatsapp-float:hover { transform: scale(1.08); }
+.whatsapp-float.is-visible { display: flex; }
