@@ -37,7 +37,7 @@
       "title": "Example Villa — Dubai Hills Estate",
       "type": "Villa",
       "id": "p2",
-      "image": "",
+      "image": "/images/properties/167aa7204f5c0b00.webp",
       "description": "A placeholder listing description. Replace with real copy once inventory is confirmed.",
       "category": "Off-Plan"
     },
@@ -57,7 +57,7 @@
       "title": "Example Tower — Business Bay",
       "type": "Apartment",
       "id": "p3",
-      "image": "",
+      "image": "/images/properties/dubai-neighborhood-business-bay.webp",
       "description": "A placeholder listing description. Replace with real copy once inventory is confirmed.",
       "category": "Rent"
     },
@@ -77,7 +77,7 @@
       "title": "Example Penthouse — Palm Jumeirah",
       "type": "Penthouse",
       "id": "p4",
-      "image": "",
+      "image": "/images/properties/palm-jumeirah-media-3-dtcm.avif",
       "description": "A placeholder listing description. Replace with real copy once inventory is confirmed.",
       "category": "Buy"
     },
@@ -97,7 +97,7 @@
       "title": "Example Townhouse — Arabian Ranches",
       "type": "Townhouse",
       "id": "p5",
-      "image": "",
+      "image": "/images/properties/64697076.jpg",
       "description": "A placeholder listing description. Replace with real copy once inventory is confirmed.",
       "category": "Off-Plan"
     },
@@ -117,7 +117,7 @@
       "title": "Example Marina Apartment — Dubai Marina",
       "type": "Apartment",
       "id": "p6",
-      "image": "",
+      "image": "/images/properties/dubai-marina-1560x10002.avif",
       "description": "A placeholder listing description. Replace with real copy once inventory is confirmed.",
       "category": "Rent"
     }
