@@ -128,12 +128,15 @@
         }
 
         if (c.whatsapp) {
-          var waUrl = "https://wa.me/" + c.whatsapp;
-          var footerWa = document.getElementById("footerWhatsapp");
-          if (footerWa) { footerWa.href = waUrl; footerWa.style.display = ""; }
-          var contactWa = document.getElementById("contactWhatsapp");
-          if (contactWa) { contactWa.href = waUrl; contactWa.textContent = "Message us on WhatsApp"; }
-        }
+  var waMessage = encodeURIComponent("Hi Somara Realty, I'd like to know more about your properties.");
+  var waUrl = "https://wa.me/" + c.whatsapp + "?text=" + waMessage;
+  var footerWa = document.getElementById("footerWhatsapp");
+  if (footerWa) { footerWa.href = waUrl; footerWa.style.display = ""; }
+  var contactWa = document.getElementById("contactWhatsapp");
+  if (contactWa) { contactWa.href = waUrl; contactWa.textContent = "Message us on WhatsApp"; }
+  var floatWa = document.getElementById("whatsappFloat");
+  if (floatWa) { floatWa.href = waUrl; floatWa.classList.add("is-visible"); }
+}
 
         if (c.instagramUrl) {
           ["footerInstagram", "ctaInstagram"].forEach(function (id) {
